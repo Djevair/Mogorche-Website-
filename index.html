@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-translate="MogorcheHomePage">Mogorche Home Page</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/b378803734.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="index.html">
+        <img src="images/logo.png" alt="Logo" class="logo">
+    </a>
+
+    <!-- Navbar with dropdown -->
+    <div class="navigationBar">
+        <div class="dropdown">
+            <a href="SubPages/InfoPage.html" data-translate="info">Info</a>
+            <div class="dropdownContent">
+                <a href="SubPages/info.html?id=geoHis" data-translate="geoHisNav">Geographical & Historical Facts</a>
+                <a href="SubPages/info.html?id=mogInNumbers" data-translate="mogInNumbersNav">Mogorche in Numbers</a>
+                <a href="SubPages/info.html?id=whoWeAre" data-translate="whoWeAreNav">Who We Are</a>
+                <a href="SubPages/InfoPage.html" data-translate="otherCategories">Other Categories</a>
+            </div>
+        </div>
+        <a href="#contactInfo" data-translate="aboutUs">About Us</a>
+        <a href="#contactInfo" data-translate="contact">Contact</a>
+        <!-- add this inside .navigationBar, before the user icon -->
+        <div class="custom-select" id="customSelect">
+            <div class="selected">
+                <img src="images/usa.png" alt="English flag"> English 
+            </div>
+            <ul class="options">
+                <li data-value="en"><img src="images/usa.png" alt="English flag"> English</li>
+                <li data-value="mk"><img src="images/macedonia.png" alt="Macedonian flag"> Македонски</li>
+                <li data-value="sq"><img src="images/albania.png" alt="Albanian flag"> Shqip</li>
+            </ul>
+        </div>
+        <i class="fa-regular fa-circle-user"></i>
+    </div>
+    <!-- Login Popup Modal -->
+    <div data-translate="loginPopup" class="popupModal">
+        <div class="popupContent">
+            <span class="closeBtn">&times;</span>
+            <h2 data-translate="loginComingSoon">Login Coming Soon</h2>
+            <p data-translate="stayTuned">Stay tuned — we're planning on adding a login section for administrators and users!</p>
+        </div>
+    </div>
+
+
+    <div class="images">
+        <img src="images/mogorche.jpg" class="slide" alt="Mogorche image 1">
+        <img src="images/mogorche2.jpg" class="slide" alt="Mogorche image 2">
+        <img src="images/mogorche3.jpg" class="slide" alt="Mogorche image 3">
+    </div>
+
+    <div class="intro">
+        <h1 data-translate="welcomeMsg">Welcome to Mogorche</h1>
+        <h2 data-translate="welcomeToMogorche">Mogorče (Macedonian: Могорче) is a village in the municipality of Debar, in the area of Mala Reka, North Macedonia. Near the village is the Elen Skok bridge.</h2>
+        <a href="SubPages/mogorche.html"><button data-translate="learnMoreButton">Learn More<i class="fa-solid fa-arrow-right"></i></button></a>
+    </div>
+
+    <div class="information">
+        <h1 data-translate="glance">Mogorche at a Glance</h1>
+        <div class="row">
+            <div class="geoHis">
+                <a href="SubPages/info.html?id=geoHis">
+                    <h2 data-translate="geoHis">Geographical & Historical Facts</h2>
+                    <ul>
+                        <li data-translate="area">Area: 2 km²</li>
+                        <li data-translate="elevation">Elevation: 1024.7 m</li>
+                        <li data-translate="firstMentioned">First mentioned: 1467</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="mogInNumbers">
+                <a href="SubPages/info.html?id=mogInNumbers">
+                    <h2 data-translate="mogInNumbers">Mogorche in Numbers</h2>
+                    <ul>
+                        <li data-translate="population">Population: 2815</li>
+                        <li data-translate="popTrend">Population Trend: Slowly decreasing</li>
+                        <li data-translate="migration">Migration: Many residents live abroad</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="whoWeAre">
+                <a href="SubPages/info.html?id=whoWeAre">
+                    <h2 data-translate="whoWeAre">Who We Are</h2>
+                    <ul>
+                        <li data-translate="ethnic">Ethnic Groups: Macedonian Muslims, Turks, Albanians</li>
+                        <li data-translate="religion">Main Religion: Islam</li>
+                        <li data-translate="language">Official Language: Macedonian</li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+        <a href="SubPages/InfoPage.html"><button data-translate="learnMoreButton">Learn More<i class="fa-solid fa-arrow-right"></i></button></a>
+    </div>
+
+    <!-- Image Compare Section -->
+    <div class="imageCompareSection">
+        <h1 data-translate="swipe">Swipe Across to Compare</h1>
+        <div class="imageBox">
+            <img src="images/background.jpg" class="bgImage">
+            <div class="imageWrap">
+                <img src="images/foreground.jpg" data-translate="originalImage">
+            </div>
+            <span id="line">
+                ‎ ‎ 
+            </span>
+        </div>
+        <div class="seasonInfo">
+            <h2 data-translate="inSeason">In Season vs. Rest of the Year</h2>
+            <p data-translate="inSeasonParagraph">
+                During wedding season, the football field is full of life and celebration.  
+                Off-season, it becomes a quiet space with only a few people around.
+            </p>    
+        </div>
+    </div>
+
+    <!-- Events & Festivities -->
+    <div class="events">
+        <h1 data-translate="eventAndFestivities">Events & Festivities in Mogorche</h1>
+        <div class="row">
+            <div class="sports">
+                <a href="SubPages/eventsPage.html">
+                    <h2 data-translate="sportsAndRecreational">Sports & Recreational Events</h2>
+                    <ul>
+                        <li data-translate="football2025">Football Tournament 2025</li>
+                        <li data-translate="pingpong">Table Tennis Tournament 2024</li>
+                        <li data-translate="football2024">Football Tournament 2024</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="weddings">
+                <a href="SubPages/eventsPage.html">
+                    <h2 data-translate="weddingsAndEngagements">Weddings & Engagements</h2>
+                    <p data-translate="findOutWeddings">Find out when certain weddings/engagements happen, and what traditions are on display</p>
+                    <ul>
+                        <li data-translate="sanela">August 11 2025 - Sanela Islamoska</li>
+                        <li data-translate="dano">August 14 2025 - Dano Miftaroski</li>
+                        <li data-translate="asmer">August 19 2025 - Asmer Avmedoski</li>
+                    </ul>
+                </a>
+            </div>
+            <div class="sunnah">
+                <a href="SubPages/eventsPage.html">
+                    <h2 data-translate="sunnahSunet">Sunnah/Sunet</h2>
+                    <p data-translate="sunet">Sunet is a traditional Muslim circumcision marking a boy’s religious and cultural initiation.</p>
+                    <ul>
+                        <li data-translate="erdin">August 11 2025 - Erdin Jasharoski</li>
+                        <li data-translate="benjamin">August 14 2025 - Benjamin Dileski</li>
+                    </ul>
+                </a>
+            </div>
+        </div>
+        <a href="SubPages/eventsPage.html"><button data-translate="learnMoreButton">Learn More<i class="fa-solid fa-arrow-right"></i></button></a>
+    </div>
+
+    <!-- Video Tour -->
+    <div class="videoTour">
+        <div class="videoText">
+            <h1 data-translate="explore">Explore Mogorche in Motion</h1>
+            <p data-translate="videoParagraph">Take a video tour through Mogorche — starting from the village entrance, passing through the lively center, and winding through our unique neighborhoods and quiet alleyways. See the charm of our village from every angle.</p>
+            <p data-translate="videoCredits"><small>Filmed with help from my friend <strong>Alit Sadikoski</strong>.</small></p>
+        </div>
+        <video src="images/MogorcheVideo.mp4" controls></video>
+    </div>
+
+    <!-- This Week in Mogorche -->
+    <div class="thisWeek">
+        <h1 data-translate="thisWeekInMogorche">This Week in Mogorche</h1>
+        <div class="row">
+            <div class="mirrors">
+                <a href="">
+                    <h2 data-translate="sphericalMirrorsInstallation">Installation of Spherical Mirrors for Safer Traffic</h2>
+                    <p data-translate="sphericalMirrors">On 13.08 in Mogorche, volunteers installed spherical traffic mirrors at key spots around the village. The mirrors improve visibility on sharp turns and narrow streets, making travel safer for drivers and pedestrians.</p>
+                </a> 
+            </div>
+            <div class="lights">
+                <a href="">
+                    <h2 data-translate="highlightsInstallation">Football Field Highlights Installed</h2>
+                    <p data-translate="highlights">On 09.08, highlights were installed in the school football field to improve nighttime visibility during festivities and the football tournament, ensuring a safer and more enjoyable experience for players and spectators.</p>
+                </a>
+            </div>
+            <div class="cement">
+                <a href="">
+                    <h2 data-translate="renovation">Karamanovci Road Renovation</h2>
+                    <p data-translate="karamanovciRenovation">On 06.08, residents of Karamanovci joined an action to replace old broken bricks with new cement ones, improving the road to the village.</p>
+                </a>
+            </div>
+        </div>
+        <a href="SubPages/communalServicePage.html">
+            <button data-translate="learnMoreButton">Learn More<i class="fa-solid fa-arrow-right"></i></button>
+        </a>
+    </div>
+
+
+    <!-- Coming Soon Section -->
+    <div class="comingSoon">
+        <h1 data-translate="comingSoon">Coming Soon</h1>
+        <p data-translate="comingSoonParagraph">Stay tuned — there's more to come from the website!</p>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5553.248821112427!2d20.618221344527253!3d41.53414303512608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1351140c868bd263%3A0xcfe9feb0402a61a1!2sMogorche!5e1!3m2!1sen!2smk!4v1751579988255!5m2!1sen!2smk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contactInfo" data-translate="contactInfo">
+                <h2 data-translate="contactInfoHeader">Contact Info</h2>
+                <p data-translate="email">Email: dzekoavmedoski@yahoo.com</p>
+                <p data-translate="phone">Phone: +389 75 945 602</p>
+                <p data-translate="address">Address: Mogorche, Debar, North Macedonia</p>
+                <p data-translate="hours">Hours: Mon–Fri, 09:00–17:00</p>
+            </div>
+            <div class="socialLinks">
+                <h2 data-translate="connect">Connect</h2>
+                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://wa.me/38975945602" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mogorche Village. All rights reserved. Djevair Avmedoski</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
