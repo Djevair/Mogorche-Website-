@@ -1,0 +1,715 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0e9d5;
+}
+.logo{
+    display: block;
+    max-width: 200px;
+    max-height: 200px;
+    margin: auto;
+}
+.navigationBar{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    gap: 35px;
+    background-color: #809628;
+    align-items: center;
+    padding: 45px;
+}
+.navigationBar i{
+    background-color: #809628;
+    font-size: 22px;
+    text-shadow: 1px 1px 1px grey;
+    cursor: pointer;
+}
+.navigationBar a{
+    background-color: #809628;
+    text-decoration: none;
+    font-size: 23px;
+    color: #000000;
+    text-shadow: 2px 2px 2px grey;
+}
+.navigationBar i:last-of-type {
+    margin-left: auto;
+    margin-right: 20px;
+    font-size: 27px;
+    text-shadow: 1px 1px 1px grey;
+}
+h1{
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px grey;
+}
+.firstRow{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px; 
+    margin: 20px;
+    margin-top: 10px;
+    gap: 100px;
+}
+.firstRow h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 40px; 
+    text-shadow: 1px 1px 1px grey;
+}
+.geoHis{
+    background-image: url("../images/geography.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.geoHis h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.geoHis a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.geoHis li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.mogInNumbers{
+    background-image: url("../images/population.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.mogInNumbers a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.mogInNumbers h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.mogInNumbers li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.whoWeAre, .geoHis, .mogInNumbers{
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 40px 40px;
+    transition: transform .2s; 
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.geoHis::before,
+.mogInNumbers::before,
+.whoWeAre::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    z-index: -1;
+    backdrop-filter: blur(2px);
+}
+.whoWeAre{
+    background-image: url("../images/whoweare.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.whoWeAre a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.whoWeAre h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.whoWeAre li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.whoWeAre:hover{
+    transform: scale(1.1);
+}
+.geoHis:hover{
+    transform: scale(1.1);
+}
+.mogInNumbers:hover{
+    transform: scale(1.1);
+}
+/*Second Row*/
+.secondRow{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px; 
+    margin: 20px;
+    margin-top: 10px;
+    gap: 100px;
+}
+.secondRow h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 40px; 
+    text-shadow: 1px 1px 1px grey;
+}
+.aroundTheVillage{
+    background-image: url("../images/17035.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.aroundTheVillage h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.aroundTheVillage a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.aroundTheVillage li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.funFacts{
+    background-image: url("../images/facts.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.funFacts a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.funFacts h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.funFacts li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.landMarks, .aroundTheVillage, .funFacts{
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 40px 40px;
+    transition: transform .2s; 
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.aroundTheVillage::before,
+.funFacts::before,
+.landMarks::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    z-index: -1;
+    backdrop-filter: blur(2px);
+}
+.landMarks{
+    background-image: url("../images/landmarks.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.landMarks a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.landMarks h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.landMarks li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.landMarks:hover{
+    transform: scale(1.1);
+}
+.aroundTheVillage:hover{
+    transform: scale(1.1);
+}
+.funFacts:hover{
+    transform: scale(1.1);
+}
+/*third row*/
+.thirdRow{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px; 
+    margin: 20px;
+    margin-top: 10px;
+    gap: 100px;
+}
+.thirdRow h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 40px; 
+    text-shadow: 1px 1px 1px grey;
+}
+.educationAndYouth{
+    background-image: url("../images/education.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.educationAndYouth h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.educationAndYouth a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.educationAndYouth li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.economy{
+    background-image: url("../images/economy.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.economy a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.economy h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.economy li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.legendsAndFolklore, .educationAndYouth, .economy{
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 40px 40px;
+    transition: transform .2s; 
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.educationAndYouth::before,
+.economy::before,
+.legendsAndFolklore::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    z-index: -1;
+    backdrop-filter: blur(2px);
+}
+.legendsAndFolklore{
+    background-image: url("../images/folklore.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.legendsAndFolklore a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.legendsAndFolklore h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.legendsAndFolklore li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.legendsAndFolklore:hover{
+    transform: scale(1.1);
+}
+.educationAndYouth:hover{
+    transform: scale(1.1);
+}
+.economy:hover{
+    transform: scale(1.1);
+}
+/*fourth row*/
+.fourthRow{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px; 
+    margin: 20px;
+    margin-top: 10px;
+    gap: 100px;
+}
+.food h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 40px; 
+    text-shadow: 1px 1px 1px grey;
+}
+.food{
+    background-image: url("../images/food.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.food h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.food a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.food li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.animalsAndPlants{
+    background-image: url("../images/animals.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.animalsAndPlants a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.animalsAndPlants h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.animalsAndPlants li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.architectureAndHomes, .food, .animalsAndPlants{
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 40px 40px;
+    transition: transform .2s; 
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.food::before,
+.animalsAndPlants::before,
+.architectureAndHomes::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); 
+    z-index: -1;
+    backdrop-filter: blur(2px);
+}
+.architectureAndHomes{
+    background-image: url("../images/homes.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.architectureAndHomes a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.architectureAndHomes h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.architectureAndHomes li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.architectureAndHomes:hover{
+    transform: scale(1.1);
+}
+.food:hover{
+    transform: scale(1.1);
+}
+.animalsAndPlants:hover{
+    transform: scale(1.1);
+}
+/*Fourth Row*/
+.footer{
+  background-color: #809628;
+  color: #f0e9d5;
+  padding: 40px 20px 10px 20px;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 260px; 
+  align-items: start;
+  padding: 20px 0; 
+}
+.footer-map iframe{
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.contactInfo,
+.socialLinks{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contactInfo h2,
+.socialLinks h2{
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 1px black;
+}
+.contactInfo h2, p{
+    text-align: center;
+} 
+.socialLinks a{
+  color: #f0e9d5;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+}
+.socialLinks a:hover{
+  color: #ffffff;
+}
+.footer-bottom{
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 10px;
+  font-size: 14px;
+  color: #f0e9d5;
+}
+/*Login Popup CSS*/
+/* Popup modal styles */
+.popupModal {
+    display: none; /* hidden by default */
+    position: fixed;
+    z-index: 999; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6); /* semi-transparent background */
+    animation: fadeIn 0.3s ease forwards; /* fade in animation */
+}
+
+.popupContent {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    
+    /* Slide down animation */
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideDown 0.3s ease forwards;
+}
+
+.popupContent h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+}
+
+.popupContent p {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #000;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.closeBtn:hover {
+    color: red;
+}
+
+/* Keyframes for fade in overlay */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Keyframes for slide down content */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/*Language Select*/
+.custom-select {
+  position: relative;
+  width: 200px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  user-select: none;
+}
+/* Selected value */
+.custom-select .selected {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  font-weight: 600;
+}
+/* Dropdown list */
+.custom-select .options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 4px;
+  display: none;
+  list-style: none;
+  padding: 0;
+  z-index: 1000;
+}
+/* Show list */
+.custom-select .options.show {
+  display: block;
+}
+/* Each option */
+.custom-select .options li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  transition: background 0.2s ease;
+}
+.custom-select .options li:hover {
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+/* Flag images */
+.custom-select img {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  object-fit: cover;
+}

@@ -1,0 +1,984 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0e9d5;
+}
+.logo{
+    display: block;
+    max-width: 200px;
+    max-height: 200px;
+    margin: auto;
+}
+.navigationBar{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    gap: 35px;
+    background-color: #809628;
+    align-items: center;
+    padding: 45px;
+}
+.navigationBar i{
+    background-color: #809628;
+    font-size: 22px;
+    text-shadow: 1px 1px 1px grey;
+    cursor: pointer;
+}
+.navigationBar a{
+    background-color: #809628;
+    text-decoration: none;
+    font-size: 23px;
+    color: #000000;
+    text-shadow: 2px 2px 2px grey;
+}
+.navigationBar i:last-of-type {
+    margin-left: auto;
+    margin-right: 20px;
+    font-size: 27px;
+    text-shadow: 1px 1px 1px grey;
+}
+.images {
+    display: flex;
+    justify-content: center;   
+    align-items: center;       
+    height: 80vh;
+    width: 100%;
+    margin-top: 10px;
+    background-color: hsl(0, 0%, 80%);
+    position: relative;
+    overflow: hidden;
+}
+.images img {
+    width: 95%;
+    max-height: 100%;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+.images img.active {
+    opacity: 1;
+    position: relative;
+}
+.intro{
+    display: block;
+    justify-content: center;   
+    align-items: center;  
+    padding-top: 150px;
+    padding-bottom: 150px;
+    margin: 20px;
+    text-align: center;
+    /* background: url('/mogorche.jpg');
+    background-size: cover;
+    background-position: center; */
+}
+.intro h1{
+    margin-bottom: 12px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px grey;
+    padding-bottom: 30px;
+    /* color: #fff; */
+}
+.intro h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-size: 21px;
+    text-shadow: 1px 1px 1px grey;
+    /* color: #fff; */
+}
+.intro a{
+    text-decoration: none;
+}
+.intro button{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    padding: 12px 18px;
+    font-size: 16px;
+    box-shadow: 1px 1px 1px grey;
+    cursor: pointer;
+    background-color: #ffffff; 
+    color: #000000;            
+    transition: all 0.3s ease;
+    margin-top: 35px;
+}
+.intro button i{
+    position: static;          
+    font-size: 18px;
+    color: inherit;            
+}
+.intro button i{
+    background-color: transparent;
+}
+.intro button:hover{
+    background-color: #809628; 
+    color: #ffffff;            
+}
+.information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px; 
+    margin: 20px;
+    margin-top: 150px;
+}
+.information h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 40px; 
+    text-shadow: 1px 1px 1px grey;
+}
+.information .row{
+    display: flex;
+    padding: 0 20px;
+    gap: 170px; 
+    margin-top: 30px;
+    justify-content: center;
+}
+.geoHis{
+    background-image: url("../images/geography.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.geoHis h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.geoHis a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.geoHis li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.mogInNumbers{
+    background-image: url("../images/population.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.mogInNumbers a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.mogInNumbers h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.mogInNumbers li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.whoWeAre, .geoHis, .mogInNumbers{
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 40px 40px;
+    transition: transform .2s; 
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.geoHis::before,
+.mogInNumbers::before,
+.whoWeAre::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* semi-transparent black */
+    z-index: -1;
+    backdrop-filter: blur(2px);
+}
+.whoWeAre{
+    background-image: url("../images/whoweare.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+.whoWeAre a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.whoWeAre h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.whoWeAre li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.whoWeAre:hover{
+    transform: scale(1.1);
+}
+.geoHis:hover{
+    transform: scale(1.1);
+}
+.mogInNumbers:hover{
+    transform: scale(1.1);
+}
+.information button{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    padding: 12px 18px;
+    font-size: 16px;
+    box-shadow: 1px 1px 1px grey;
+    cursor: pointer;
+    background-color: #ffffff; 
+    color: #000000;            
+    transition: all 0.3s ease;
+    margin-top: 50px;
+}
+.information button i{
+    position: static;          
+    font-size: 18px;
+    color: inherit;            
+}
+.information button i{
+    background-color: transparent;
+}
+.information button:hover{
+    background-color: #809628; 
+    color: #ffffff;            
+}
+.information a{
+    text-decoration: none;
+}
+.videoTour{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px; 
+    margin: 20px;
+    gap: 120px;
+    flex-wrap: wrap; 
+    text-align: center;
+    margin-top: 150px;
+}
+.videoTour video{
+    width: 600px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 1px black;
+}
+.videoText{
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+}
+.videoText h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 1px grey;
+}
+.videoText p{
+    font-size: 22px;
+    line-height: 1.6;
+    font-style: italic;
+    text-shadow: 1px 1px 1px grey;
+}
+.footer{
+  background-color: #809628;
+  color: #f0e9d5;
+  padding: 40px 20px 10px 20px;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 260px; 
+  align-items: start;
+  padding: 20px 0; 
+}
+.footer-map iframe{
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.contactInfo,
+.socialLinks{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contactInfo h2,
+.socialLinks h2{
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 1px black;
+}
+.contactInfo h2, p{
+    text-align: center;
+} 
+.socialLinks a{
+  color: #f0e9d5;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+  text-align: center;
+}
+.socialLinks a:hover{
+  color: #ffffff;
+}
+.footer-bottom{
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 10px;
+  font-size: 14px;
+  color: #f0e9d5;
+}
+/*Compare image css*/
+.imageCompareSection {
+  text-align: center;
+  padding: 100px 20px;
+  margin: 60px 0;
+}
+.imageCompareSection h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 1px grey;
+}
+.imageBox {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.imageBox img {
+  width: 100%;
+  display: block;
+  user-select: none;
+  pointer-events: none;
+}
+.imageWrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%; /* Start halfway */
+  height: 100%;
+  overflow: hidden;
+}
+.imageWrap img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+#line {
+  position: absolute;
+  top: 0;
+  left: 50%; /* Start in middle */
+  height: 100%;
+  width: 5px;
+  background: #809628;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: ew-resize; /* show drag cursor */
+  transition: left 0.1s ease; /* smooth movement */
+}
+.arrow {
+  width: 30px;
+  filter: drop-shadow(1px 1px 2px black);
+}
+.seasonInfo {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  text-align: center;
+}
+.seasonInfo h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  margin-bottom: 15px;
+  text-shadow: 1px 1px 1px grey;
+}
+.seasonInfo p {
+  font-size: 18px;
+  line-height: 1.6;
+  font-style: italic;
+  text-shadow: 1px 1px 1px grey;
+}
+/*Events & Festivities section*/
+.events{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px; 
+    margin: 20px;
+    margin-top: 150px;
+}
+.events h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 40px; 
+    text-shadow: 1px 1px 1px grey;
+}
+.events .row{
+    display: flex;
+    padding: 0 20px;
+    gap: 170px; 
+    margin-top: 30px;
+    justify-content: center;
+}
+.sports{
+    background-image: url("../images/sports.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.sports h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.sports a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.sports li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.weddings{
+    background-image: url("../images/wedding.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.weddings p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    padding-top: 12px;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.weddings a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.weddings h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.weddings li{
+    list-style: none;
+    font-size: 18px;
+    margin-top: 5px;
+    padding: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.sunnah, .sports, .weddings{
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 40px 40px;
+    transition: transform .2s; 
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.sports::before,
+.weddings::before,
+.sunnah::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* semi-transparent black */
+    z-index: -1;
+    backdrop-filter: blur(2px);
+}
+.sunnah{
+    background-image: url("../images/sunet.JPG");
+    background-size: cover;
+    background-position: center;
+}
+.sunnah p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    padding-top: 12px;
+    padding-bottom: 25px;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.sunnah a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.sunnah h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.sunnah li{
+    list-style: none;
+    font-size: 18px;
+    padding: 8px;
+    font-weight: bold;
+    text-shadow: 1px 1px 1px black;
+}
+.sunnah:hover{
+    transform: scale(1.1);
+}
+.sports:hover{
+    transform: scale(1.1);
+}
+.weddings:hover{
+    transform: scale(1.1);
+}
+.events button{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    padding: 12px 18px;
+    font-size: 16px;
+    box-shadow: 1px 1px 1px grey;
+    cursor: pointer;
+    background-color: #ffffff; 
+    color: #000000;            
+    transition: all 0.3s ease;
+    margin-top: 50px;
+}
+.events button i{
+    position: static;          
+    font-size: 18px;
+    color: inherit;            
+}
+.events button i{
+    background-color: transparent;
+}
+.events button:hover{
+    background-color: #809628; 
+    color: #ffffff;            
+}
+.events a{
+    text-decoration: none;
+}
+/*Coming Soon section css*/
+.comingSoon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+    margin: 50px 0;
+    box-shadow: 1px 1px 5px grey;
+    
+    /* Construction stripes effect */
+    background: repeating-linear-gradient(
+        45deg,
+        #FFD700,        /* Yellow */
+        #FFD700 20px,
+        #000000 20px,   /* Black */
+        #000000 40px
+    );
+}
+.comingSoon h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 3px rgb(19, 15, 15);
+    color: #B1DDF1;
+}
+.comingSoon p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-style: italic;
+    text-shadow: 3px 3px 3px black;
+    color: #B1DDF1;
+}
+/*Login Popup CSS*/
+/* Popup modal styles */
+.popupModal {
+    display: none; /* hidden by default */
+    position: fixed;
+    z-index: 999; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6); /* semi-transparent background */
+    animation: fadeIn 0.3s ease forwards; /* fade in animation */
+}
+
+.popupContent {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    
+    /* Slide down animation */
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideDown 0.3s ease forwards;
+}
+
+.popupContent h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+}
+
+.popupContent p {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #000;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.closeBtn:hover {
+    color: red;
+}
+
+/* Keyframes for fade in overlay */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Keyframes for slide down content */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/*Dropdown container*/
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown menu content (hidden by default) */
+/* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown menu content (hidden by default) */
+.dropdownContent {
+    display: none;
+    position: absolute;
+    top: 100%; /* appear below the button */
+    left: 0;
+    background-color: #FFD700; /* yellow background for contrast */
+    min-width: 200px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    z-index: 1000;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Dropdown menu links */
+.dropdownContent a {
+    color: #000000; /* black text */
+    font-size: 14px; /* smaller font size */
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+.dropdownContent a:hover {
+    background-color: #e6c200; /* slightly darker yellow on hover */
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdownContent {
+    display: flex;
+    flex-direction: column;
+    opacity: 1;
+}
+
+
+.custom-select {
+  position: relative;
+  width: 200px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  user-select: none;
+}
+/* Selected value */
+.custom-select .selected {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  font-weight: 600;
+}
+/* Dropdown list */
+.custom-select .options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 4px;
+  display: none;
+  list-style: none;
+  padding: 0;
+  z-index: 1000;
+}
+/* Show list */
+.custom-select .options.show {
+  display: block;
+}
+/* Each option */
+.custom-select .options li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  transition: background 0.2s ease;
+}
+.custom-select .options li:hover {
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+/* Flag images */
+.custom-select img {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+/* Latest Activities section */
+.thisWeek{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px; 
+    margin: 20px;
+    margin-top: 150px;
+}
+.thisWeek h1{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    margin-bottom: 40px; 
+    text-shadow: 1px 1px 1px grey;
+}
+.thisWeek .row{
+    display: flex;
+    padding: 0 20px;
+    gap: 170px; 
+    margin-top: 30px;
+    justify-content: center;
+}
+.mirrors{
+    background-image: url("../images/sphericalMirror.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.mirrors h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.mirrors a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.mirrors p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    padding-top: 12px;
+    padding-bottom: 25px;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.lights{
+    background-image: url("../images/stadium.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.lights p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    padding-top: 12px;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.lights a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.lights h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.cement, .mirrors, .lights{
+    border: 1px solid grey;
+    border-radius: 8px;
+    padding: 40px 40px;
+    transition: transform .2s; 
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+.mirrors::before,
+.lights::before,
+.cement::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); /* semi-transparent black */
+    z-index: -1;
+    backdrop-filter: blur(2px);
+}
+.cement{
+    background-image: url("../images/cement.jpg");
+    background-size: cover;
+    background-position: center;
+}
+.cement p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    padding-top: 12px;
+    padding-bottom: 25px;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.cement a{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}
+.cement h2{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    line-height: 1.5;
+    font-style: italic;
+    text-shadow: 1px 1px 1px black;
+}
+.mirrors:hover{
+    transform: scale(1.1);
+}
+.cement:hover{
+    transform: scale(1.1);
+}
+.lights:hover{
+    transform: scale(1.1);
+}
+.thisWeek button{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    padding: 12px 18px;
+    font-size: 16px;
+    box-shadow: 1px 1px 1px grey;
+    cursor: pointer;
+    background-color: #ffffff; 
+    color: #000000;            
+    transition: all 0.3s ease;
+    margin-top: 50px;
+}
+.thisWeek button i{
+    position: static;          
+    font-size: 18px;
+    color: inherit;            
+}
+.thisWeek button i{
+    background-color: transparent;
+}
+.thisWeek button:hover{
+    background-color: #809628; 
+    color: #ffffff;            
+}
+.thisWeek a{
+    text-decoration: none;
+}

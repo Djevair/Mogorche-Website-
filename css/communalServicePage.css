@@ -1,0 +1,348 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0e9d5;
+}
+.logo{
+    display: block;
+    max-width: 200px;
+    max-height: 200px;
+    margin: auto;
+}
+.navigationBar{
+    display: flex;
+    height: 70px;
+    width: 100%;
+    gap: 35px;
+    background-color: #809628;
+    align-items: center;
+    padding: 45px;
+}
+.navigationBar i{
+    background-color: #809628;
+    font-size: 22px;
+    text-shadow: 1px 1px 1px grey;
+    cursor: pointer;
+}
+.navigationBar a{
+    background-color: #809628;
+    text-decoration: none;
+    font-size: 23px;
+    color: #000000;
+    text-shadow: 2px 2px 2px grey;
+}
+.navigationBar i:last-of-type {
+    margin-left: auto;
+    margin-right: 20px;
+    font-size: 27px;
+    text-shadow: 1px 1px 1px grey;
+}
+h1{
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    text-shadow: 1px 1px 1px grey;
+}
+/*Add new css here*/
+.backButton{
+  padding: 10px 7px;
+}
+.backButton a{
+  font-size: 20px;
+  text-decoration: none;
+  color: hsl(0, 0%, 0%);
+  text-shadow: 1px 1px 1px grey;
+}
+.backButton a:hover{
+  color: rgb(49, 49, 49);
+}
+.backButton i{
+  color: #6b801f;
+  text-shadow: 1px 1px 1px grey;
+}
+
+/*Add new css here*/
+.footer{
+  background-color: #809628;
+  color: #f0e9d5;
+  padding: 40px 20px 10px 20px;
+}
+.footer-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 260px; 
+  align-items: start;
+  padding: 20px 0; 
+}
+.footer-map iframe{
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+.contactInfo,
+.socialLinks{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.contactInfo h2,
+.socialLinks h2{
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 1px black;
+}
+.contactInfo h2, p{
+    text-align: center;
+} 
+.socialLinks a{
+  color: #f0e9d5;
+  text-decoration: none;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.2s;
+}
+.socialLinks a:hover{
+  color: #ffffff;
+}
+.footer-bottom{
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid rgba(255,255,255,0.2);
+  padding-top: 10px;
+  font-size: 14px;
+  color: #f0e9d5;
+}
+/*Login Popup CSS*/
+/* Popup modal styles */
+.popupModal {
+    display: none; /* hidden by default */
+    position: fixed;
+    z-index: 999; 
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.6); /* semi-transparent background */
+    animation: fadeIn 0.3s ease forwards; /* fade in animation */
+}
+
+.popupContent {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 400px;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    
+    /* Slide down animation */
+    transform: translateY(-50px);
+    opacity: 0;
+    animation: slideDown 0.3s ease forwards;
+}
+
+.popupContent h2 {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 15px;
+}
+
+.popupContent p {
+    font-family: 'Montserrat', sans-serif;
+    font-style: italic;
+}
+
+.closeBtn {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #000;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.closeBtn:hover {
+    color: red;
+}
+
+/* Keyframes for fade in overlay */
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+
+/* Keyframes for slide down content */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+/*Language Select*/
+.custom-select {
+  position: relative;
+  width: 200px;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+  user-select: none;
+}
+/* Selected value */
+.custom-select .selected {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 5px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fff;
+  font-weight: 600;
+}
+/* Dropdown list */
+.custom-select .options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-top: 4px;
+  display: none;
+  list-style: none;
+  padding: 0;
+  z-index: 1000;
+}
+/* Show list */
+.custom-select .options.show {
+  display: block;
+}
+/* Each option */
+.custom-select .options li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  transition: background 0.2s ease;
+}
+.custom-select .options li:hover {
+  background: #f0f0f0;
+  border-radius: 8px;
+}
+/* Flag images */
+.custom-select img {
+  width: 20px;
+  height: 20px;
+  border-radius: 3px;
+  object-fit: cover;
+}
+
+/* Diary Page CSS */
+#content {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    font-family: 'Montserrat', sans-serif;
+}
+.diaryEntry {
+    background-color: #f0e9d5;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 40px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.entryDate {
+    font-size: 0.9em;
+    color: #555;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px grey;
+}
+.entryTitle {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1a1a1a;
+    text-shadow: 1px 1px 1px grey;
+}
+.entryCategory {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+.entryImage {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 1px 1px 6px rgba(0,0,0,0.2);
+}
+.entryDescription {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+.navigationButtons {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+.navigationButtons button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #809628;
+    color: #f0e9d5;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+.navigationButtons button:hover:not(:disabled) {
+    background-color: #6c7d22;
+}
+.navigationButtons button:disabled {
+    background-color: #b5b58c;
+    cursor: default;
+}
+/* Optional: Fade-in animation for diary entries */
+.diaryEntry {
+    animation: fadeInEntry 0.3s ease forwards;
+}
+@keyframes fadeInEntry {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+/* Page Intro */
+.pageIntro {
+    max-width: 800px;
+    margin: 40px auto 20px auto;
+    padding: 0 15px;
+    text-align: center;
+}
+
+.pageIntro h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #2c3e50; /* dark elegant tone */
+}
+
+.pageIntro p {
+    font-family: 'Lora', serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555; /* softer tone for readability */
+}
