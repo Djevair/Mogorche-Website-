@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mogorche Info Page</title>
+    <link rel="stylesheet" href="../css/infoPageStyle.css">
+    <script src="https://kit.fontawesome.com/b378803734.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="../index.html">
+        <img src="../images/logo.png" alt="Logo" class="logo">
+    </a>
+    <div class="navigationBar">
+        <a href="../index.html" data-translate="home">Home</a>
+        <a href="#contactInfo" data-translate="aboutUs">About Us</a>
+        <a href="#contactInfo" data-translate="contact">Contact</a>
+        <div class="custom-select" id="customSelect">
+            <div class="selected">
+                <img src="../images/usa.png" alt="English flag"> English 
+            </div>
+            <ul class="options">
+                <li data-value="en"><img src="../images/usa.png" alt="English flag"> English</li>
+                <li data-value="mk"><img src="../images/macedonia.png" alt="Macedonian flag"> Македонски</li>
+                <li data-value="sq"><img src="../images/albania.png" alt="Albanian flag"> Shqip</li>
+            </ul>
+        </div>
+        <i class="fa-regular fa-circle-user"></i>
+    </div>
+
+    <!-- Login Popup Modal -->
+    <div data-translate="loginPopup" class="popupModal">
+        <div class="popupContent">
+            <span class="closeBtn">&times;</span>
+            <h2 data-translate="loginComingSoon">Login Coming Soon</h2>
+            <p data-translate="stayTuned">Stay tuned — we're planning on adding a login section for administrators and users!</p>
+        </div>
+    </div>
+    
+    <h1 data-translate="infoTitle">Information about Mogorche</h1>
+    <div class="firstRow">
+        <div class="geoHis">
+                <a href="info.html?id=geoHis">
+                    <h2 id="geoHis" data-translate="geoHis">Geographical & Historical Facts</h2>
+                    <ul>
+                        <li id="area" data-translate="area">Area: 2 km²</li>
+                        <li id="elevation" data-translate="elevation">Elevation: 1024.7 m</li>
+                        <li id="firstMentioned" data-translate="firstMentioned">First mentioned: 1467</li>
+                    </ul>
+                </a>
+        </div>
+        <div class="mogInNumbers">
+                <a href="info.html?id=mogInNumbers">
+                    <h2 id="mogInNumbers" data-translate="mogInNumbers">Mogorche in Numbers</h2>
+                    <ul>
+                        <li id="population" data-translate="population">Population: 2815</li>
+                        <li id="popTrend" data-translate="popTrend">Population Trend: Slowly decreasing</li>
+                        <li id="migration" data-translate="migration">Migration: Many residents live abroad</li>
+                    </ul>
+                </a>
+        </div>
+        <div class="whoWeAre">
+                <a href="info.html?id=whoWeAre">
+                    <h2 id="whoWeAre" data-translate="whoWeAre">Who We Are</h2>
+                    <ul>
+                        <li id="ethnic" data-translate="ethnic">Ethnic Groups: Macedonian Muslims, Turks, Albanians</li>
+                        <li id="religion" data-translate="religion">Main Religion: Islam</li>
+                        <li id="language" data-translate="language">Official Language: Macedonian</li>
+                    </ul>
+                </a>
+        </div>
+    </div>
+    <div class="secondRow">
+        <div class="aroundTheVillage">
+                <a href="info.html?id=aroundTheVillage">
+                    <h2 id="aroundTheVillage" data-translate="aroundTheVillage">Around the Village</h2>
+                    <ul>
+                        <li id="cafes" data-translate="cafes">Cafés: Ashmet Komerc, Maca Kom, Omer Kom</li>
+                        <li id="shops" data-translate="shops">Shops: Gimi Kom, Baftijar Komerc, Ruzhdija Kom, Asan Kom</li>
+                        <li id="ambulance" data-translate="ambulance">Ambulance: Mogorche Ambulance</li>
+                    </ul>
+                </a>
+        </div>
+        <div class="funFacts">
+                <a href="info.html?id=funFacts">
+                    <h2 id="funfacts" data-translate="funfacts">Fun Facts</h2>
+                    <ul>
+                        <li id="waterSources" data-translate="waterSources">Springs & fountains: Biljanec, Jasika, Kalosici, Belesnica</li>
+                        <li id="mobileCoverage" data-translate="mobileCoverage">Mobile Coverage: Decent 4G Internet (A1, T-Mobile, Lyca)</li>
+                        <li id="migrationDestinations" data-translate="migrationDestinations">Migration Destinations: Italy, Germany, Slovenia, Switzerland</li>
+                    </ul>
+                </a>
+        </div>
+        <div class="landMarks">
+                <a href="info.html?id=landMarks">
+                    <h2 id="landMarks" data-translate="landMarks">Land Marks</h2>
+                    <ul>
+                        <li id="elenSkok" data-translate="elenSkok">Elen Skok Bridge: 4-5 km from Mogorche by foot</li>
+                        <li id="mosque" data-translate="mosque">Mosque: Kevser Mosque</li>
+                        <li id="radika" data-translate="radika">River: Radika</li>
+                    </ul>
+                </a>
+        </div>
+    </div>
+    <div class="thirdRow">
+        <div class="educationAndYouth">
+                <a href="info.html?id=educationAndYouth">
+                    <h2 id="educationYouth" data-translate="educationYouth">Education & Youth</h2>
+                    <ul>
+                        <li id="primarySchool" data-translate="primarySchool">Primary School: SOU "Mirche Acev"</li>
+                        <li id="highSchool" data-translate="highSchool">High School: "28 Nentori"</li>
+                        <li id="mekteb" data-translate="mekteb">Theological School: Mekteb</li>
+                    </ul>
+                </a>
+        </div>
+        <div class="economy">
+                <a href="info.html?id=economy">
+                    <h2 id="economy" data-translate="economy">Economy</h2>
+                    <ul>
+                        <li id="agriculture" data-translate="agriculture">Agriculture: Livestock, Farming</li>
+                        <li id="localEconomy" data-translate="localEconomy">Local Economy: Local Shops</li>
+                        <li id="livestock" data-value="livestock">Livestock: Sheep, Horse, Cows, Chickens</li>
+                    </ul>
+                </a>
+        </div>
+        <div class="legendsAndFolklore">
+                <a href="info.html?id=legendsAndFolklore">
+                    <h2 id="legendsandFolkore" data-translate="legendsandFolklore">Legends & Folkore</h2>
+                    <ul>
+                        <li id="elenSkokBridge" data-translate="elenSkokBridge">Elen Skok Bridge: Named after the Deer that lept off it (Deep Leap Bridge)</li>
+                        <li id="mogorche" data-value="mogorche">Mogorche: Name Origin</li>
+                        <li id="oldStories" data-translate="oldStories">Old Stories: Ghost stories, Religious tales</li>
+                    </ul>
+                </a>
+        </div>
+    </div>
+    <div class="fourthRow">
+        <div class="food">
+                <a href="info.html?id=food">
+                    <h2 id="foodAndCuisine" data-translate="foodAndCuisine">Food & Cuisine</h2>
+                    <ul>
+                        <li id="food" data-translate="food">Traditional Food: Pita, Tiganici, Pastrma</li>
+                        <li id="drink" data-translate="drink">Traditional Beverages: Rose Hip Tea</li>
+                        <li id="sweets" data-translate="sweets">Traditional Sweets: Baklava, Trilece, Sejkerpare</li>
+                    </ul>
+                </a>
+        </div>
+        <div class="animalsAndPlants">
+                <a href="info.html?id=animalsAndPlants">
+                    <h2 id="animalsAndPlants" data-translate="animalsAndPlants">Flora & Fauna</h2>
+                    <ul>
+                        <li id="animals" data-translate="animals">Animals: Cats, Dogs, Cows, Horses, Chicken</li>
+                        <li id="plants" data-translate="plants">Plants: Rose Hips, Dogwood, Mogorchanian Pears</li>
+                        <li id="endemic" data-translate="endemic">Endemic Species: Mogorchanian Pears</li>
+                    </ul>
+                </a>
+        </div>
+        <div class="architectureAndHomes">
+                <a href="info.html?id=architectureAndHomes">
+                    <h2 id="architectureAndHomes" data-translate="architectureAndHomes">Architecture & Homes</h2>
+                    <ul>
+                        <li id="architecture" data-translate="architecture">Architecture: Modern mixed in with some older buildings</li>
+                        <li id="homes" data-translate="homes">Homes: Modern homes made by renovating older ones</li>
+                        <li id="antique" data-translate="antique">Antique: Fountains, Mosque, Antique Houses</li>
+                    </ul>
+                </a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5553.248821112427!2d20.618221344527253!3d41.53414303512608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1351140c868bd263%3A0xcfe9feb0402a61a1!2sMogorche!5e1!3m2!1sen!2smk!4v1751579988255!5m2!1sen!2smk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contactInfo" data-translate="contactInfo">
+                <h2 data-translate="contactInfoHeader">Contact Info</h2>
+                <p data-translate="email">Email: dzekoavmedoski@yahoo.com</p>
+                <p data-translate="phone">Phone: +389 75 945 602</p>
+                <p data-translate="address">Address: Mogorche, Debar, North Macedonia</p>
+                <p data-translate="hours">Hours: Mon–Fri, 09:00–17:00</p>
+            </div>
+            <div class="socialLinks">
+                <h2 data-translate="connect">Connect</h2>
+                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://wa.me/38975945602" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mogorche Village. All rights reserved. Djevair Avmedoski</p>
+        </div>
+    </footer>
+      
+<script src="../js/infoPage.js"></script>
+</body>
+</html>

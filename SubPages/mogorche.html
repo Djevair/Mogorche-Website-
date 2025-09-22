@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mogorche Info Page</title>
+    <link rel="stylesheet" href="../css/mogorche.css">
+    <script src="https://kit.fontawesome.com/b378803734.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="../index.html">
+        <img src="../images/logo.png" alt="Logo" class="logo">
+    </a>
+    <div class="navigationBar">
+        <a href="../index.html" data-translate="home">Home</a>
+        <a href="#contactInfo" data-translate="aboutUs">About Us</a>
+        <a href="#contactInfo" data-translate="contact">Contact</a>
+        <div class="custom-select" id="customSelect">
+            <div class="selected">
+                <img src="../images/usa.png" alt="English flag"> English 
+            </div>
+            <ul class="options">
+                <li data-value="en"><img src="../images/usa.png" alt="English flag"> English</li>
+                <li data-value="mk"><img src="../images/macedonia.png" alt="Macedonian flag"> Македонски</li>
+                <li data-value="sq"><img src="../images/albania.png" alt="Albanian flag"> Shqip</li>
+            </ul>
+        </div>
+        <i class="fa-regular fa-circle-user"></i>
+    </div>
+    <!-- Login Popup Modal -->
+    <div data-translate="loginPopup" class="popupModal">
+        <div class="popupContent">
+            <span class="closeBtn">&times;</span>
+            <h2 data-translate="loginComingSoon">Login Coming Soon</h2>
+            <p data-translate="stayTuned">Stay tuned — we're planning on adding a login section for administrators and users!</p>
+        </div>
+    </div>
+    
+    <h1 class="allAbout" data-translate="allAboutHeader">All about Mogorche</h1>
+    <div class="intro">
+        <img src="../images/mogorche.jpg" alt="Mogorche Image">
+        <div class="infoSection">
+            <h1 data-translate="mogorcheTitle">Mogorche</h1>
+            <ul>
+                <li data-translate="point1">Mogorche is a picturesque village located in Debar, North Macedonia.</li>
+                <li data-translate="point2">The village is surrounded by scenic mountains, rivers, and lush forests.</li>
+                <li data-translate="point3">It has a rich cultural heritage, with traditional music, dance, and local festivals.</li>
+                <li data-translate="point4">Residents are known for their hospitality and strong community spirit.</li>
+                <li data-translate="point5">Mogorche features a mix of historical landmarks and modern charm.</li>
+                <li data-translate="point6">Seasonal events attract both locals and tourists, offering unique experiences.</li>
+                <li data-translate="point7">Traditional crafts and local cuisine are an important part of daily life.</li>
+                <li data-translate="point8">The village is a popular destination for hiking, nature photography, and cultural tourism.</li>
+                <li data-translate="point9">Many legends and stories are preserved through oral history and folklore.</li>
+                <li data-translate="point10">The village architecture reflects traditional North Macedonian style, with stone houses and historic buildings.</li>
+            </ul>
+        </div>
+    </div>
+
+    
+    <div class="collapsible-container">
+        <!--Geography-->
+        <button class="collapsible">
+            <span class="collapsible-icon">🌄</span>
+            <span data-translate="geography">Geography</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <div class="content">
+            <div class="content-inner">
+                <div class="text">
+                    <h1 data-translate="geographyHeader">Mogorche's Geography</h1>
+                    <p data-translate="geographyText">Mogorche is a picturesque village situated in the Debar region of western North Macedonia, surrounded by the Jablanica and Deshat mountain ranges. Its elevated position provides sweeping views of valleys, rivers, and dense forests that shape the area’s natural beauty. The climate is mainly continental, marked by warm, sunny summers and cold, snowy winters, offering a strong contrast between the seasons. These conditions not only support traditional agriculture but also make the village a favored spot for outdoor activities such as hiking, nature photography, and exploring the diverse flora and fauna that thrive in the region.</p>
+                </div>
+                <img src="../images/mogorche3.jpg">
+            </div>
+        </div>
+
+        <!--Culture-->
+        <button class="collapsible">
+            <span class="collapsible-icon">🎭</span>
+            <span data-translate="culture">Culture</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <div class="content">
+            <div class="content-inner">
+                <div class="text">
+                    <h1 data-translate="cultureHeader">Mogorche's Culture</h1>
+                    <p data-translate="cultureText">Mogorche is a village deeply rooted in tradition, where culture plays a central role in daily life. The community is known for preserving age-old customs through music, dance, and storytelling, often showcased during local festivals and gatherings. Traditional folk songs, played with instruments like the çifteli and drum, accompany lively dances that bring people of all ages together. Handcrafted textiles, woodwork, and other artisanal crafts reflect the creativity and skills passed down through generations. Hospitality is a cornerstone of Mogorche’s identity, with residents warmly welcoming guests and sharing local dishes that highlight the village’s culinary heritage. These cultural practices not only strengthen community bonds but also connect Mogorche to the broader traditions of North Macedonia.</p>
+                </div>
+                <img src="../images/sunet.JPG">
+            </div>
+        </div>
+
+        <!--History-->
+        <button class="collapsible">
+            <span class="collapsible-icon">📜</span>
+            <span data-translate="history">History</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <div class="content">
+            <div class="content-inner">
+                <div class="text">
+                    <h1 data-translate="historyHeader">Mogorche's History</h1>
+                    <p data-translate="historyText">Mogorche’s history stretches back centuries, shaped by its strategic position in the Debar region and its close ties to surrounding mountain communities. The village preserves many elements of traditional North Macedonian architecture, with stone houses, narrow lanes, and historic churches that reflect both local craftsmanship and cultural resilience. Oral traditions play an important role in keeping the past alive, with legends and folktales passed down through generations, recounting stories of village life, struggles, and celebrations. Over time, Mogorche has witnessed periods of change yet managed to retain its cultural identity, blending old customs with newer influences. Today, its historical landmarks and collective memory serve as a bridge between past and present, offering insight into the enduring spirit of its people.</p>
+                </div>
+                <img src="../images/template.jpg">
+            </div>
+        </div>
+
+        <!--Mogorche in numbers-->
+        <button class="collapsible">
+            <span class="collapsible-icon">📊</span>
+            <span data-translate="numbers">Mogorche in Numbers</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <div class="content">
+            <div class="content-inner">
+                <div class="text">
+                    <h1 data-translate="numbersHeader">Mogorche in Numbers</h1>
+                    <p data-translate="numbersText">Mogorche is a small but lively community of around 550–600 permanent residents, with numbers nearly doubling in the summer when families return from abroad. The village is characterized by its close-knit households, where everyone knows one another and shares in each other’s joys and challenges. Migration has long been part of Mogorche’s story, with many working in countries like Switzerland, Germany, and Italy, yet the heart of the community remains firmly rooted in its mountain surroundings. This balance between tradition at home and experiences abroad has given Mogorche a unique rhythm, blending village life with connections to the wider world.</p>
+                </div>
+                <img src="../images/template.jpg">
+            </div>
+        </div>
+
+        <!--Who we are-->
+        <button class="collapsible">
+            <span class="collapsible-icon">🧑‍🤝‍🧑</span>
+            <span data-translate="whoWeAre">Who We Are</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <div class="content">
+            <div class="content-inner">
+                <div class="text">
+                    <h1 data-translate="whoWeAreHeader">Who We Are</h1>
+                    <p data-translate="whoWeAreText">The people of Mogorche are known for their warmth, hospitality, and strong sense of community. Social life often revolves around family gatherings, weddings, and religious holidays, when neighbors come together in celebration. The village is bilingual, with Macedonian and Albanian spoken side by side, reflecting its rich cultural blend. Music and dance remain central to community life, as traditional folk songs and the sound of the çifteli bring generations together in shared joy. These customs, along with the everyday kindness of its residents, paint a vivid picture of a village proud of its roots and open to the world.</p>
+                </div>
+                <img src="../images/template.jpg">
+            </div>
+        </div>
+
+        <!--Fun facts-->
+        <button class="collapsible">
+            <span class="collapsible-icon">🧠</span>
+            <span data-translate="funFacts">Fun & Unique Facts</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <div class="content">
+            <div class="content-inner">
+                <div class="text">
+                    <h1 data-translate="funFactsHeader">Fun & Unique Facts</h1>
+                    <p data-translate="funFactsText">Mogorche is a village full of small details and stories that make it unique. In the past, it was known for its orchards, especially pears, which gave locals their playful nickname. The arrival of electricity in the early 20th century and the first car in the 1960s were milestones that villagers still talk about today, symbols of progress in a once-isolated mountain community. Even now, Mogorche balances old and new — from lively football tournaments on the village field to evenings where elders share ghost stories and legends by the fire. These quirks and traditions weave together a portrait of a village unlike any other in the Debar region.</p>
+                </div>
+                <img src="../images/template.jpg">
+            </div>
+        </div>
+
+        <!--Around the village-->
+        <button class="collapsible">
+            <span class="collapsible-icon">🏘️</span>
+            <span data-translate="aroundVillage">Around the Village</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <div class="content">
+            <div class="content-inner">
+                <div class="text">
+                    <h1 data-translate="aroundVillageHeader">Around the Village</h1>
+                    <p data-translate="aroundVillageText">Life in Mogorche revolves around its small but essential spaces. The mosque and school form the heart of the community, while cafés and a local shop provide gathering points where neighbors exchange news and laughter. Public fountains remain important meeting spots, continuing traditions from the past when fetching water was a daily routine. The surrounding landscape offers easy escapes into nature, with trails leading to meadows, forests, and springs just a short walk away. Though modest in size, Mogorche has everything needed for a strong sense of belonging and daily connection to the land.</p>
+                </div>
+                <img src="../images/template.jpg">
+            </div>
+        </div>
+
+        <!--Economy-->
+        <button class="collapsible">
+            <span class="collapsible-icon">💰</span>
+            <span data-translate="economy">The Economy of Mogorche</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <div class="content">
+            <div class="content-inner">
+                <div class="text">
+                    <h1 data-translate="economyHeader">The Economy of Mogorche</h1>
+                    <p data-translate="economyText">For centuries, the people of Mogorche relied on farming, herding, and forestry to sustain their families. Corn, beans, and vegetables filled the fields, while sheep and goats grazed the nearby hills. Woodcutting was another livelihood, with timber used for heating and construction. In recent decades, however, the economy has shifted, with many residents seeking seasonal work abroad and sending back support to their families. Despite these changes, the rhythm of village life is still tied to the land, where harvest seasons and livestock care remain important parts of the year.</p>
+                </div>
+                <img src="../images/template.jpg">
+            </div>
+        </div>
+
+        <!--Legends & Folklore-->
+        <button class="collapsible">
+            <span class="collapsible-icon">🧙‍♂️</span>
+            <span data-translate="legends">Legends & Folklore</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <div class="content">
+            <div class="content-inner">
+                <div class="text">
+                    <h1 data-translate="legendsHeader">Legends & Folklore</h1>
+                    <p data-translate="legendsText">Legends and folklore are deeply rooted in Mogorche’s identity, giving the village a sense of mystery and timelessness. One of the most famous stories is that of Elen Skok, a place named after a deer said to have leapt across a river in a single bound. Elders also speak of hidden treasures left behind in Ottoman times, guarded by spirits or snakes that ward off intruders. On quiet evenings, ghost stories and tales of strange encounters in the forests are still told, especially to children, ensuring that Mogorche’s rich imagination and oral traditions continue to live on.</p>
+                </div>
+                <img src="../images/template.jpg">
+            </div>
+        </div>
+
+        <!--Education & Youth-->
+        <button class="collapsible">
+            <span class="collapsible-icon">🎓</span>
+            <span data-translate="education">Education & Youth</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <div class="content">
+            <div class="content-inner">
+                <div class="text">
+                    <h1 data-translate="educationHeader">Education & Youth</h1>
+                    <p data-translate="educationText">Education is an important part of life in Mogorche, where children attend the village primary and high schools. The local youth are ambitious and curious, dreaming of careers in medicine, engineering, teaching, and technology. Even with modern influences, traditional values remain strong, and young people often balance school, family duties, and community life. Many students pursue further education in larger towns, bringing new ideas back to the village. At the same time, the theological school in Mogorche ensures that religious knowledge and cultural traditions are passed to the next generation, blending modern aspirations with heritage.</p>
+                </div>
+                <img src="../images/template.jpg">
+            </div>
+        </div>
+
+        <!--Food & Beverages-->
+        <button class="collapsible">
+            <span class="collapsible-icon">🍲</span>
+            <span data-translate="food">Food & Beverages</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <div class="content">
+            <div class="content-inner">
+                <div class="text">
+                    <h1 data-translate="foodHeader">Food & Beverages</h1>
+                    <p data-translate="foodText">The flavors of Mogorche tell a story of local tradition and hospitality. Residents enjoy homemade dishes like pita stuffed with fresh vegetables or minced meat, tiganici fried to a golden crisp, and jufki pasta prepared in family batches each year. Pastrma, salted and dried sheep meat, is a winter favorite served with beans and fresh bread, while sarma rolls offer comfort and warmth during holidays. Meals are often shared with family and visitors, reinforcing the village’s culture of generosity and community. Cafés also offer small daily gatherings, where coffee, tea, and conversation are as much a part of the village’s nourishment as the food itself.</p>
+                </div>
+                <img src="../images/template.jpg">
+            </div>
+        </div>
+
+        <!--Flora & Fauna-->
+        <button class="collapsible">
+            <span class="collapsible-icon">🌳</span>
+            <span data-translate="flora">Flora & Fauna</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <div class="content">
+            <div class="content-inner">
+                <div class="text">
+                    <h1 data-translate="floraHeader">Flora & Fauna</h1>
+                    <p data-translate="floraText">Mogorche is surrounded by rich forests, meadows, and valleys that support a diverse array of animals and plants. Cats and dogs roam the village freely, cared for by villagers who have a deep bond with them. Cows, sheep, and goats provide fresh milk, cheese, and wool for local households, while horses remain useful for transporting wood and navigating mountain paths. Occasionally, bears and other wildlife are spotted at the edges of the village, reminding residents of the untamed beauty nearby. Wildflowers, fruit trees, and lush pastures add color and life to the landscape, making Mogorche a place where people and nature live closely together.</p>
+                </div>
+                <img src="../images/template.jpg">
+            </div>
+        </div>
+
+        <!--Architecture & Homes-->
+        <button class="collapsible">
+            <span class="collapsible-icon">🏠</span>
+            <span data-translate="architecture">Architecture & Homes</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <div class="content">
+            <div class="content-inner">
+                <div class="text">
+                    <h1 data-translate="architectureHeader">Architecture & Homes</h1>
+                    <p data-translate="architectureText">The village of Mogorche is a mix of old and new, where traditional stone houses sit alongside more modern constructions. Many older homes date back over a century, maintained carefully by families who preserve the original layout and craftsmanship. These homes reflect the village’s history, with thick walls, small windows, and wooden beams that tell stories of generations past. Newer homes are built with contemporary designs and materials but often retain elements of traditional architecture, blending harmoniously with their surroundings. Together, these homes form a villagescape that honors both heritage and modernity.</p>
+                </div>
+                <img src="../images/template.jpg">
+            </div>
+        </div>
+
+        <!--Landmarks-->
+        <button class="collapsible">
+            <span class="collapsible-icon">🏛️</span>
+            <span data-translate="landmarks">Landmarks</span>
+            <i class="fa-solid fa-angle-down"></i>
+        </button>
+        <div class="content">
+            <div class="content-inner">
+                <div class="text">
+                    <h1 data-translate="landmarksHeader">Landmarks</h1>
+                    <p data-translate="landmarksText">Mogorche is dotted with landmarks that hold cultural, historical, and natural significance. The Kevser Mosque is at the heart of village life, a place of worship and gathering. Old bridges and fountains stand as reminders of past generations, while viewpoints offer panoramic vistas of the surrounding mountains and valleys. Each landmark is tied to stories, legends, and daily life, creating a sense of continuity and shared identity. Visitors are encouraged to explore these sites, as they tell the tale of Mogorche through architecture, nature, and community.</p>
+                </div>
+                <img src="../images/template.jpg">
+            </div>
+        </div>
+</div>
+  
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5553.248821112427!2d20.618221344527253!3d41.53414303512608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1351140c868bd263%3A0xcfe9feb0402a61a1!2sMogorche!5e1!3m2!1sen!2smk!4v1751579988255!5m2!1sen!2smk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contactInfo" data-translate="contactInfo">
+                <h2 data-translate="contactInfoHeader">Contact Info</h2>
+                <p data-translate="email">Email: dzekoavmedoski@yahoo.com</p>
+                <p data-translate="phone">Phone: +389 75 945 602</p>
+                <p data-translate="address">Address: Mogorche, Debar, North Macedonia</p>
+                <p data-translate="hours">Hours: Mon–Fri, 09:00–17:00</p>
+            </div>
+            <div class="socialLinks">
+                <h2 data-translate="connect">Connect</h2>
+                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://wa.me/38975945602" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mogorche Village. All rights reserved. Djevair Avmedoski</p>
+        </div>
+    </footer>
+    
+<script src="../js/mogorche.js"></script>
+</body>
+</html>

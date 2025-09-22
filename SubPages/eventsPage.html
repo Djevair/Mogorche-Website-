@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mogorche Events Info Page</title>
+    <link rel="stylesheet" href="../css/eventsPage.css">
+    <script src="https://kit.fontawesome.com/b378803734.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="../index.html">
+        <img src="../images/logo.png" alt="Logo" class="logo">
+    </a>
+    <div class="navigationBar">
+        <a href="../index.html" data-translate="home">Home</a>
+        <a href="#contactInfo" data-translate="aboutUs">About Us</a>
+        <a href="#contactInfo" data-translate="contact">Contact</a>
+        <div class="custom-select" id="customSelect">
+            <div class="selected">
+                <img src="../images/usa.png" alt="English flag"> English 
+            </div>
+            <ul class="options">
+                <li data-value="en"><img src="../images/usa.png" alt="English flag"> English</li>
+                <li data-value="mk"><img src="../images/macedonia.png" alt="Macedonian flag"> Македонски</li>
+                <li data-value="sq"><img src="../images/albania.png" alt="Albanian flag"> Shqip</li>
+            </ul>
+        </div> 
+        <i class="fa-regular fa-circle-user"></i>
+    </div>
+    
+    <!-- Login Popup Modal -->
+    <div data-translate="loginPopup" class="popupModal">
+        <div class="popupContent">
+            <span class="closeBtn">&times;</span>
+            <h2 data-translate="loginComingSoon">Login Coming Soon</h2>
+            <p data-translate="stayTuned">Stay tuned — we're planning on adding a login section for administrators and users!</p>
+        </div>
+    </div>
+
+    <h1 data-translate="eventsTitle">Events & Festivities in Mogorche</h1>
+    <p class="intro-text" data-translate="introText">
+        Explore all the events and celebrations in Mogorche! Click on any date in the calendar below to see what’s happening in the village — from festivals and sports to weddings and cultural gatherings.
+    </p>
+
+    <div class="calendar-container">
+        <!-- Calendar Header -->
+        <div class="calendar-header">
+            <button id="prevMonth">←</button>
+            <h2 id="monthYear"></h2>
+            <button id="nextMonth">→</button>
+        </div>
+
+        <!-- Month Selector -->
+        <select id="monthSelect"></select>
+
+        <!-- Calendar Grid -->
+        <div class="calendar-grid" id="calendarDays"></div>
+
+        <div class="calendar-legend">
+            <span><span class="legend-box past"></span> <span data-translate="pastEvent">Past Event</span></span>
+            <span><span class="legend-box upcoming"></span> <span data-translate="upcomingEvent">Upcoming Event</span></span>
+            <span><span class="legend-box today"></span> <span data-translate="todayEvent">Today</span></span>
+        </div>  
+
+
+        <!-- Events Section -->
+        <div class="event-details" id="eventDetails">
+            <p>Select a date to see event details.</p>
+        </div>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5553.248821112427!2d20.618221344527253!3d41.53414303512608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1351140c868bd263%3A0xcfe9feb0402a61a1!2sMogorche!5e1!3m2!1sen!2smk!4v1751579988255!5m2!1sen!2smk" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="contactInfo" data-translate="contactInfo">
+                <h2 data-translate="contactInfoHeader">Contact Info</h2>
+                <p data-translate="email">Email: dzekoavmedoski@yahoo.com</p>
+                <p data-translate="phone">Phone: +389 75 945 602</p>
+                <p data-translate="address">Address: Mogorche, Debar, North Macedonia</p>
+                <p data-translate="hours">Hours: Mon–Fri, 09:00–17:00</p>
+            </div>
+            <div class="socialLinks">
+                <h2 data-translate="connect">Connect</h2>
+                <a href="#"><i class="fab fa-facebook-f"></i> Facebook</a>
+                <a href="#"><i class="fab fa-instagram"></i> Instagram</a>
+                <a href="https://wa.me/38975945602" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 Mogorche Village. All rights reserved. Djevair Avmedoski</p>
+        </div>
+    </footer> 
+     
+<script src="../js/eventsPage.js"></script>
+</body>
+</html>
